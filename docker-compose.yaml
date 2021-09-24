@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  webapp:
+    build: webapp/
+    volumes:
+      - ./webapp/src:/app/src
+      - ./webapp/public:/app/public
