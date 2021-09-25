@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { motion, useAnimation, useMotionValue, useTransform } from 'framer-motion';
 import './ArtworkCard.css';
 
@@ -8,7 +9,7 @@ function ArtworkCard({ title, desc, imageUrl }) {
           className="artwork-card col card flex-grow-1 d-flex flex-column justify-content-end"
           style={{ backgroundImage: 'url(' + imageUrl + ')' }}>
         <div className="card-body flex-grow-0 p-4 pt-5">
-          <h5 className="card-title">{title}</h5>
+          <h5 className="card-title"><Link to="/details" className="text-reset text-decoration-none">{title}</Link></h5>
           <p className="card-text">{desc}</p>
         </div>
       </div>
@@ -52,7 +53,7 @@ function DraggableArtworkCard({ title, desc, imageUrl }) {
         style={{ x, rotate, opacity, backgroundImage: 'url(' + imageUrl + ')' }}
         onDragEnd={onDragEndHandler}>
       <div className="card-body flex-grow-0 p-4 pt-5">
-        <h5 className="card-title">{title}</h5>
+        <h5 className="card-title"><Link to="/details" className="text-reset text-decoration-none">{title}</Link></h5>
         <p className="card-text">{desc}</p>
       </div>
     </motion.div>

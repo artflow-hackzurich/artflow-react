@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import DetailsPage from './pages/DetailsPage';
 import SwipePage from './pages/SwipePage';
 
 class App extends React.Component {
@@ -19,6 +20,9 @@ class App extends React.Component {
             <h1 className="col mb-0">{this.state.appTitle}</h1>
           </section>
           <Switch>
+            <Route path="/details">
+              <DetailsPage />
+            </Route>
             <Route path="/">
               <SwipePage />
             </Route>
