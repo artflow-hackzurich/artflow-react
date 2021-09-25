@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import DetailsPage from './pages/DetailsPage';
 import SwipePage from './pages/SwipePage';
-import FancyButton from './components/FancyButton';
+import BottomPane from './components/BottomPane';
 
 class App extends React.Component {
 
@@ -21,24 +21,9 @@ class App extends React.Component {
             <h1 className="col mb-0">{this.state.appTitle}</h1>
           </section>
           <Switch>
-            <Route path="/artwork/:id">
-              <DetailsPage />
-            </Route>
-            <Route path="/">
-              <SwipePage />
-            </Route>
+            <Route path="/artwork/:id" component={DetailsPage} />
+            <Route component={SwipePage} />
           </Switch>
-        
-    
-          <section className="row py-3 text-center" style={{ background: '#EEE' }}>
-            <div className="text-center d-flex align-items-center justify-content-center pb-4">
-              <FancyButton message="Browse" />
-              <FancyButton message="History" />
-              <FancyButton message="Messages" />
-              <FancyButton message="Profile" />
-            </div>
-          </section>
-      
         </div>
       </Router>
     );
