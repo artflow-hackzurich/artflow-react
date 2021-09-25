@@ -1,0 +1,11 @@
+.artwork-card {
+  position: relative;
+  flex-basis: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.artwork-card > .card-body {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0, rgba(0,0,0,0.7) 5rem);
+  color: white;
+}
