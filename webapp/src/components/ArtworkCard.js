@@ -3,24 +3,36 @@ import { Link } from "react-router-dom";
 import { motion, useAnimation, useMotionValue, useTransform } from 'framer-motion';
 import './ArtworkCard.css';
 
-function ArtworkCard({ title, year, artistName, imageUrl }) {
-    return (
-      <div
-          className="artwork-card col card flex-grow-1 d-flex flex-column justify-content-end"
-          style={{ backgroundImage: 'url(' + imageUrl + ')' }}>
-        <div className="card-body flex-grow-0 p-4 pt-5">
-          <h5 className="card-title d-flex">
-            <Link to="/details" className="text-reset text-decoration-none">{title}</Link>
-            <span className="fw-normal flex-grow-1">, {year}</span>
-            <Link to="/details" className="artwork-card-info-button badge rounded-pill text-dark text-decoration-none">i</Link>
-          </h5>
-          <p className="card-text">{artistName}</p>
-        </div>
+function ArtworkCard({ artwork, artist }) {
+  const detailsLinkTo = {
+    pathname: '/artwork/' + artwork.id,
+    artwork,
+    artist
+  }
+
+  return (
+    <div
+        className="artwork-card col card flex-grow-1 d-flex flex-column justify-content-end"
+        style={{ backgroundImage: 'url(' + artwork.imageUrl + ')' }}>
+      <div className="card-body flex-grow-0 p-4 pt-5">
+        <h5 className="card-title d-flex">
+          <Link to={detailsLinkTo} className="text-reset text-decoration-none">{artwork.title}</Link>
+          <span className="fw-normal flex-grow-1">, {artwork.year}</span>
+          <Link to={detailsLinkTo} className="artwork-card-info-button badge rounded-pill text-dark text-decoration-none">i</Link>
+        </h5>
+        <p className="card-text">{artist.name}</p>
       </div>
-    );
+    </div>
+  );
 }
 
-function DraggableArtworkCard({ title, year, artistName, imageUrl }) {
+function DraggableArtworkCard({ artwork, artist }) {
+  const detailsLinkTo = {
+    pathname: '/artwork/' + artwork.id,
+    artwork,
+    artist
+  }
+
   const windowWidth = document.documentElement.clientWidth;
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-0.6 * windowWidth, 0.6 * windowWidth], [-30, 30]);
@@ -54,15 +66,15 @@ function DraggableArtworkCard({ title, year, artistName, imageUrl }) {
         drag="x"
         dragConstraints={{ left: -windowWidth, right: windowWidth }}
         className="artwork-card col card flex-grow-1 d-flex flex-column justify-content-end"
-        style={{ x, rotate, opacity, backgroundImage: 'url(' + imageUrl + ')' }}
+        style={{ x, rotate, opacity, backgroundImage: 'url(' + artwork.imageUrl + ')' }}
         onDragEnd={onDragEndHandler}>
       <div className="card-body flex-grow-0 p-4 pt-5">
         <h5 className="card-title d-flex">
-          <Link to="/details" className="text-reset text-decoration-none">{title}</Link>
-          <span className="fw-normal flex-grow-1">, {year}</span>
-          <Link to="/details" className="artwork-card-info-button badge rounded-pill text-dark text-decoration-none">i</Link>
+          <Link to={detailsLinkTo} className="text-reset text-decoration-none">{artwork.title}</Link>
+          <span className="fw-normal flex-grow-1">, {artwork.year}</span>
+          <Link to={detailsLinkTo} className="artwork-card-info-button badge rounded-pill text-dark text-decoration-none">i</Link>
         </h5>
-        <p className="card-text">{artistName}</p>
+        <p className="card-text">{artist.name}</p>
       </div>
     </motion.div>
   );

@@ -13,9 +13,6 @@ class App extends React.Component {
   }
 
   render() {
-    const sampleArtist = { name: 'Van Gogh', bio: 'Bio preview' };
-    const sampleArtwork = { name: 'Starry Night', year: 2021, desc: 'A timeless classic.', artist: sampleArtist, imageUrl: 'http://172.22.0.2:3000/starry-night.jpg' };
-
     return (
       <Router>
         <div className="container-fluid vh-100 d-flex flex-column">
@@ -23,8 +20,8 @@ class App extends React.Component {
             <h1 className="col mb-0">{this.state.appTitle}</h1>
           </section>
           <Switch>
-            <Route path="/details">
-              <DetailsPage artwork={sampleArtwork} artist={sampleArtist} />
+            <Route path="/artwork/:id">
+              <DetailsPage />
             </Route>
             <Route path="/">
               <SwipePage />
