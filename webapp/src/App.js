@@ -1,64 +1,32 @@
-import logo from './logo.svg';
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
-import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import SwipePage from './pages/SwipePage';
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/a">A</Link>
-            </li>
-            <li>
-              <Link to="/b">B</Link>
-            </li>
-          </ul>
-        </nav>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+class App extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+        appTitle: "SuperApp"
+    };
+  }
+
+  render() {
+    return (
+      <Router>
+        <div className="container-fluid vh-100 d-flex flex-column">
+          <section className="row py-3 text-center" style={{ background: '#EEE' }}>
+            <h1 className="col mb-0">{this.state.appTitle}</h1>
+          </section>
           <Switch>
-            <Route path="/a">
-              <PageA />
-            </Route>
-            <Route path="/b">
-              <PageB />
-            </Route>
             <Route path="/">
-              <PageHome />
+              <SwipePage />
             </Route>
           </Switch>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    </Router>
-  );
-
-
-}
-
-function PageA() {
-  return <p>A</p>;
-}
-
-function PageB() {
-  return <p>B</p>;
-}
-
-function PageHome() {
-  return <p>Home</p>;
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
