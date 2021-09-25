@@ -1,0 +1,35 @@
+.artwork-preview {
+  height: 140vw;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.artwork-preview .ar-btn {
+  background: #FFF;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding-top: 0.3rem;
+}
+
+.artwork-preview .back-btn {
+  background: orange;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  padding-top: 0;
+  position: relative;
+  top: 2.75rem;
+}
+
+.artist-block > img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.artist-block .contact-btn {
+  border: 0;
+  background: orange;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25em;
+  color: #FFF;
+}
