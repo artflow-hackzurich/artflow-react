@@ -32,8 +32,8 @@ function DetailsPage() {
             {artwork.title}
             <span className="fw-normal">, {artwork.year}</span>
           </h2>
-          <p className="small mb-0">Dimensions</p>
-          <p className="small mb-2">Medium</p>
+          <p className="small mb-0">{ artwork.dims }</p>
+          <p className="small mb-2">{ artwork.medium }</p>
           <p>{artwork.desc}</p>
         </div>
         <div className="artist-block border-top py-3 px-4 d-flex gap-3 align-items-center">
