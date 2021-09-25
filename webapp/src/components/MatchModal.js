@@ -12,7 +12,6 @@ function MatchModal({ artwork, artist, visible }) {
   }, []);
 
   useEffect(() => {
-    console.log('Visible: ' + visible);
     if (visible) {
       modal.show();
     }
