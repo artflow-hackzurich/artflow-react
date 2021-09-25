@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { motion, useAnimation, useMotionValue, useTransform } from 'framer-motion';
 import './ArtworkCard.css';
 
-function ArtworkCard({ artwork, artist }) {
+function ArtworkCard({ artwork }) {
+  const artist = artwork.artist;
+
   const detailsLinkTo = {
     pathname: '/artwork/' + artwork.id,
     artwork,
@@ -26,7 +28,9 @@ function ArtworkCard({ artwork, artist }) {
   );
 }
 
-function DraggableArtworkCard({ artwork, artist }) {
+function DraggableArtworkCard({ artwork }) {
+  const artist = artwork.artist;
+
   const detailsLinkTo = {
     pathname: '/artwork/' + artwork.id,
     artwork,
