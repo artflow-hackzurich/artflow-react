@@ -1,3 +1,4 @@
 .bottom-pane {
+  z-index: var(--over-modal-z-index);
   background: #EEE;
 }

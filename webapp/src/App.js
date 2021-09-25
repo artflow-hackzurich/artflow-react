@@ -10,7 +10,7 @@ const App = () => {
     <Router>
       <div className='container-fluid vh-100 d-flex flex-column'>
         <section
-          className='row py-3 text-center'
+          className='app-header row py-3 text-center'
           style={{ background: '#EEE' }}
         >
           <h1 className='col mb-0'>{appTitle}</h1>
