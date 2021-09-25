@@ -8,10 +8,10 @@ class SwipeArea extends React.Component {
     super(props);
     this.state = {
       artworks: [
-        { name: 'Starry Night', desc: 'A great classic', imageUrl: 'http://172.22.0.2:3000/starry-night.jpg' },
-        { name: 'Mona Lisa', desc: 'Another one', imageUrl: 'http://172.22.0.2:3000/mona-lisa.jpg' },
-        { name: 'Starry Night', desc: 'A great classic', imageUrl: 'http://172.22.0.2:3000/starry-night.jpg' },
-        { name: 'Mona Lisa', desc: 'Another one', imageUrl: 'http://172.22.0.2:3000/mona-lisa.jpg' }
+        { name: 'Starry Night', year: 2021, artistName: 'Van Gogh', imageUrl: 'http://172.22.0.2:3000/starry-night.jpg' },
+        { name: 'Mona Lisa', year: 2021, artistName: 'Da Vinci', imageUrl: 'http://172.22.0.2:3000/mona-lisa.jpg' },
+        { name: 'Starry Night', year: 2021, artistName: 'Van Gogh', imageUrl: 'http://172.22.0.2:3000/starry-night.jpg' },
+        { name: 'Mona Lisa', year: 2021, artistName: 'Da Vinci', imageUrl: 'http://172.22.0.2:3000/mona-lisa.jpg' }
       ]
     }
     this.onSwipe = this.onSwipe.bind(this);
@@ -37,8 +37,8 @@ class SwipeArea extends React.Component {
     const back = this.state.artworks[1];
     return (
       <div className="col flex-grow-1 d-flex p-4">
-        {this.state.artworks.length >= 1 && <DraggableArtworkCard title={front.name} desc={front.desc} imageUrl={front.imageUrl} />}
-        {this.state.artworks.length >= 2 && <ArtworkCard title={back.name} desc={back.desc} imageUrl={back.imageUrl} />}
+        {this.state.artworks.length >= 1 && <DraggableArtworkCard title={front.name} year={front.year} artistName={front.artistName} imageUrl={front.imageUrl} />}
+        {this.state.artworks.length >= 2 && <ArtworkCard title={back.name} year={back.year} artistName={back.artistName} imageUrl={back.imageUrl} />}
       </div>
     );
   }

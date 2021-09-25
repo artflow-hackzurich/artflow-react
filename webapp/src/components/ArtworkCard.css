@@ -9,3 +9,10 @@
   background: linear-gradient(180deg, rgba(0,0,0,0) 0, rgba(0,0,0,0.7) 5rem);
   color: white;
 }
+
+.artwork-card-info-button {
+  background: #FFF;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-top: 0.3rem;
+}
