@@ -1,0 +1,7 @@
+.artwork-card:first-child {
+  z-index: 10;
+}
+
+.artwork-card:nth-child(2) {
+  transform: translateX(calc(3rem - 100vw)) !important; /* 3rem from .p-4 */
+}
