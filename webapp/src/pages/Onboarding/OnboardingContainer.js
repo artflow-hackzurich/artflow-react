@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
+import OnboardingOne from './OnboardingOne';
+import OnboardingTwo from './OnboardingTwo';
+import './style.css';
 
 const OnboardingContainer = () => {
   const [page, setPage] = useState(1);
   const [formData, setFormData] = useState({
-    user: {},
+    user: {
+      firstName: '',
+      email: '',
+      selectedCategories: [], // Array of strings
+      docUrl: '',
+    },
   });
 
   const goNextPage = () => {
@@ -22,9 +30,22 @@ const OnboardingContainer = () => {
   };
 
   return (
-    <div>
+    <div className='center flex-center mb-3'>
       <div>
-        <progress max='4' value={page} />
+        <div className='d-flex justify-content-center'>
+          <progress max='3' value={page} />
+        </div>
+
+        {/* <div class='progress'>
+          <div
+            class='progress-bar'
+            role='progressbar'
+            aria-valuenow={page}
+            aria-valuemin='0'
+            aria-valuemax='3'
+          ></div>
+        </div> */}
+
         {page === 1 && (
           <OnboardingOne formData={formData.firstName} update={updateData} />
         )}
@@ -34,11 +55,18 @@ const OnboardingContainer = () => {
         {page === 3 && (
           <OnboardingThree formData={formData.docUrl} update={updateData} />
         )}
-        {page === 4 && <OnboardingFour update={updateData} />}
       </div>
-      {page !== 4 && <button onClick={goNextPage}>Go Next</button>}
-      {page === 4 && (
-        <button type='submit' onClick={submitFormData}>
+      {page !== 3 && (
+        <button className='btn btn-primary' onClick={goNextPage}>
+          CONTINUE
+        </button>
+      )}
+      {page === 3 && (
+        <button
+          className='btn btn-primary'
+          type='submit'
+          onClick={submitFormData}
+        >
           Submit
         </button>
       )}
@@ -47,16 +75,6 @@ const OnboardingContainer = () => {
 };
 
 export default OnboardingContainer;
-
-const OnboardingOne = (params) => {
-  const newData = {};
-
-  return <div>Page 1</div>;
-};
-
-const OnboardingTwo = (params) => {
-  return <div>Page 2</div>;
-};
 
 const OnboardingThree = (params) => {
   return <div>Page 3</div>;
