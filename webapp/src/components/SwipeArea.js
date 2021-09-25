@@ -6,14 +6,19 @@ class SwipeArea extends React.Component {
 
   constructor(props){
     super(props);
-    this.state = {
-      artworks: [
-        { name: 'Starry Night', year: 2021, artistName: 'Van Gogh', imageUrl: 'http://172.22.0.2:3000/starry-night.jpg' },
-        { name: 'Mona Lisa', year: 2021, artistName: 'Da Vinci', imageUrl: 'http://172.22.0.2:3000/mona-lisa.jpg' },
-        { name: 'Starry Night', year: 2021, artistName: 'Van Gogh', imageUrl: 'http://172.22.0.2:3000/starry-night.jpg' },
-        { name: 'Mona Lisa', year: 2021, artistName: 'Da Vinci', imageUrl: 'http://172.22.0.2:3000/mona-lisa.jpg' }
-      ]
-    }
+
+    const artists = [
+      { id: 1, name: 'Van Gogh', bio: 'Bio preview' },
+      { id: 2, name: 'Da Vinci', bio: 'Bio preview' }
+    ];
+    const artworks = [
+      { id: 1, title: 'Starry Night', year: 2021, desc: 'A timeless classic.', artist: artists[0], imageUrl: 'http://172.22.0.2:3000/starry-night.jpg' },
+      { id: 2, title: 'Mona Lisa', year: 2021, desc: 'A timeless classic.', artist: artists[1], imageUrl: 'http://172.22.0.2:3000/mona-lisa.jpg' },
+      { id: 3, title: 'Starry Night', year: 2021, desc: 'A timeless classic.', artist: artists[0], imageUrl: 'http://172.22.0.2:3000/starry-night.jpg' },
+      { id: 4, title: 'Mona Lisa', year: 2021, desc: 'A timeless classic.', artist: artists[1], imageUrl: 'http://172.22.0.2:3000/mona-lisa.jpg' }
+    ];
+
+    this.state = { artworks };
     this.onSwipe = this.onSwipe.bind(this);
   }
 
@@ -37,8 +42,8 @@ class SwipeArea extends React.Component {
     const back = this.state.artworks[1];
     return (
       <div className="col flex-grow-1 d-flex p-4">
-        {this.state.artworks.length >= 1 && <DraggableArtworkCard title={front.name} year={front.year} artistName={front.artistName} imageUrl={front.imageUrl} />}
-        {this.state.artworks.length >= 2 && <ArtworkCard title={back.name} year={back.year} artistName={back.artistName} imageUrl={back.imageUrl} />}
+        {this.state.artworks.length >= 1 && <DraggableArtworkCard artwork={front} artist={front.artist} />}
+        {this.state.artworks.length >= 2 && <ArtworkCard artwork={back} artist={back.artist} />}
       </div>
     );
   }

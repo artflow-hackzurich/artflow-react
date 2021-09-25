@@ -16,12 +16,8 @@ const App = () => {
           <h1 className='col mb-0'>{appTitle}</h1>
         </section>
         <Switch>
-          <Route path='/details'>
-            <DetailsPage />
-          </Route>
-          <Route path='/'>
-            <SwipePage />
-          </Route>
+          <Route path='/artwork/:id' component={DetailsPage} />
+          <Route component={SwipePage} />
         </Switch>
       </div>
     </Router>
