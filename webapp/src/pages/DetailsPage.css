@@ -37,3 +37,11 @@
   border: 0;
   padding: 0.3rem 2rem;
 }
+
+.for-sale-toast {
+  height: 2.75rem;
+  line-height: 2.75rem;
+  padding: 0 1.5rem;
+  background: black;
+  transform: translateY(-64px);
+}
