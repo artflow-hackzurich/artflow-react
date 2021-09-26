@@ -42,6 +42,6 @@
   height: 2.75rem;
   line-height: 2.75rem;
   padding: 0 1.5rem;
-  background: black;
+  background: var(--accent-gradient);
   transform: translateY(-64px);
 }

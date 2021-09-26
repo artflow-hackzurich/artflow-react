@@ -30,4 +30,4 @@ code {
   flex-direction: column;
 }
 
-.app-header { z-index: var(--over-modal-z-index); }
+.app-header { z-index: var(--over-modal-z-index); padding-top: 3rem !important; }
