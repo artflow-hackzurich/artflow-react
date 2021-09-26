@@ -17,12 +17,11 @@ function ArtworkCard({ artwork }) {
         className="artwork-card col card flex-grow-1 d-flex flex-column justify-content-end"
         style={{ backgroundImage: 'url(' + artwork.imageUrl + ')' }}>
       <div className="card-body flex-grow-0 p-4 pt-5">
-        <h5 className="card-title d-flex">
-          <Link to={detailsLinkTo} className="text-reset text-decoration-none">{artwork.title}</Link>
-          <span className="fw-normal flex-grow-1">, {artwork.year}</span>
+        <h5 className="card-title d-flex gap-2">
+          <Link to={detailsLinkTo} className="artwork-title text-reset text-decoration-none">{artwork.title}</Link>
           <Link to={detailsLinkTo} className="artwork-card-info-button badge rounded-pill text-dark text-decoration-none">i</Link>
         </h5>
-        <p className="card-text">{artist.name}</p>
+        <p className="card-text">{artist.name}, {artwork.year}</p>
       </div>
     </div>
   );
@@ -73,12 +72,11 @@ function DraggableArtworkCard({ artwork }) {
         style={{ x, rotate, opacity, backgroundImage: 'url(' + artwork.imageUrl + ')' }}
         onDragEnd={onDragEndHandler}>
       <div className="card-body flex-grow-0 p-4 pt-5">
-        <h5 className="card-title d-flex">
-          <Link to={detailsLinkTo} className="text-reset text-decoration-none">{artwork.title}</Link>
-          <span className="fw-normal flex-grow-1">, {artwork.year}</span>
+        <h5 className="card-title d-flex gap-2">
+          <Link to={detailsLinkTo} className="artwork-title text-reset text-decoration-none">{artwork.title}</Link>
           <Link to={detailsLinkTo} className="artwork-card-info-button badge rounded-pill text-dark text-decoration-none">i</Link>
         </h5>
-        <p className="card-text">{artist.name}</p>
+        <p className="card-text">{artist.name}, {artwork.year}</p>
       </div>
     </motion.div>
   );

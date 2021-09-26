@@ -4,7 +4,7 @@ import './BottomPane.css';
 
 function BottomPane() {
   return (
-    <section className="bottom-pane row pt-0 px-4 pb-1">
+    <section className="bottom-pane row px-4 py-1 border-top">
       <BottomPaneButton linkTo="/browse" icon="search" />
       <BottomPaneButton linkTo="/history" icon="heart" />
       <BottomPaneButton linkTo="/messages" icon="message-circle" />

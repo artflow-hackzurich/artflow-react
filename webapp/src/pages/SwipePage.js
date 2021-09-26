@@ -6,10 +6,10 @@ import MatchModal from '../components/MatchModal';
 
 function SwipePage() {
   const sampleArtists = [
-    { id: 1, name: 'Stuart Davis', bio: 'Bio preview' },
-    { id: 2, name: 'Raphael Hefti', bio: 'Bio preview' },
-    { id: 3, name: 'Christo and Jean-Claude', bio: 'Bio preview' },
-    { id: 4, name: 'Pieter de Hoock', bio: 'Bio preview' }
+    { id: 1, name: 'Stuart Davis', bio: 'Bio preview', imageUrl: '/artists/stuart-davis.png' },
+    { id: 2, name: 'Raphael Hefti', bio: 'Bio preview', imageUrl: '/artists/raphael-hefti.jpg' },
+    { id: 3, name: 'Christo and Jean-Claude', bio: 'Bio preview', imageUrl: '/artists/christo-jean-claude.jpg' },
+    { id: 4, name: 'Pieter de Hoock', bio: 'Bio preview', imageUrl: '/artists/pieter-de-hoock.jpg' }
   ];
 
   const MediumStillLife = 'With its abstract arrangement of colorful forms, "Medium Still Life" demonstrates Davis\'s use of what he called "color-space." The artist had developed the idea that the juxtaposition of strong colors could create spatial relationships within a painting, without the use of traditional perspective. He articulated his theories on the use of color in the 1940s, saying, "I think of it as another element like line and space… as an interval of space.… People use to think of color and form as two things. I think of them as the same thing."';

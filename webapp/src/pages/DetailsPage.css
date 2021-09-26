@@ -1,35 +1,39 @@
 .artwork-preview {
   height: 140vw;
+  max-height: 60vh;
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .artwork-preview .ar-btn {
-  background: #FFF;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding-top: 0.3rem;
+  background: black;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding-top: 0.35rem;
 }
 
 .artwork-preview .back-btn {
-  background: orange;
-  width: 3rem;
-  height: 3rem;
+  background: black;
+  width: 2.75rem;
+  height: 2.75rem;
   font-size: 2rem;
   padding-top: 0;
-  position: relative;
-  top: 2.75rem;
 }
 
 .artist-block > img {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
 }
 
-.artist-block .contact-btn {
+.artist-block .artist-details-btn {
+  width: 32px;
+  height: 32px;
   border: 0;
-  background: orange;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.25em;
-  color: #FFF;
+  background: #FFF;
+}
+
+.buy-btn {
+  text-transform: uppercase;
+  border: 0;
+  padding: 0.3rem 2rem;
 }
