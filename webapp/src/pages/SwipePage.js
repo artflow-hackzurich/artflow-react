@@ -24,7 +24,7 @@ function SwipePage() {
     { id: 1, title: 'Medium Still Life', year: '1953', desc: MediumStillLife, artist: sampleArtists[0], imageUrl: '/artworks/medium-still-life.jpg', dims: '114.3 x 91.44 cm', price: 550, medium: 'Painting - Oil on canvas' },
     { id: 2, title: 'Salutary Failures, Message Not Sent', year: '2020', desc: RaphaelHefti, artist: sampleArtists[1], imageUrl: '/artworks/raphael-hefti-artwork.jpeg', dims: '114.3 x 91.44 cm', price: 18, medium: 'Painting - Oil on canvas' },
     { id: 3, title: 'L\'Arc de  Triomphe, Wrapped', year: '1961-2021', desc: LArcDeTriompheWrapped, artist: sampleArtists[2], imageUrl: '/artworks/arc.webp',  dims: '', price: 0, medium: 'Exhibition in Paris' },
-    { id: 4, title: 'Starry Night', year: '1889', desc: StarryNight, artist: sampleArtists[4], imageUrl: '/artworks/starry-night.jpg', dims: '73.7 x 92.1 cm', price: 2300, medium: 'Painting - Oil on canvas'},
+    { id: 4, title: 'Starry Night', year: '1889', desc: StarryNight, artist: sampleArtists[4], imageUrl: '/artworks/starry-night.jpg', dims: '73.7 x 92.1 cm', price: '2\'300', medium: 'Painting - Oil on canvas'},
     { id: 5, title: 'The Bedroom', year: '1658', desc: TheBedroom, artist: sampleArtists[3], imageUrl: '/artworks/the-bedroom.jpg',  dims: '51 x 60 cm', price: 1200, medium: 'Painting - Oil on canvas'}
   ];
 
