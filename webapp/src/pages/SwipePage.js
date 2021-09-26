@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import FancyButton from '../components/FancyButton';
 import SwipeArea from '../components/SwipeArea';
 import BottomPane from '../components/BottomPane';
@@ -37,14 +37,14 @@ function SwipePage() {
     if (e.detail.dir === 'right') {
       setModalVisible(true);
     }
-  }
+  };
 
   useEffect(() => {
     window.addEventListener('swipe', onSwipe);
     return () => {
       window.removeEventListener('swipe', onSwipe);
     };
-  }, []);
+  });
 
   return <>
     <section className="row flex-grow-1 d-flex flex-column overflow-hidden">
@@ -53,7 +53,7 @@ function SwipePage() {
         <FancyButton customClass="btn-dont-like" icon="dont-like" />
         <FancyButton customClass="btn-like" icon="like" />
       </div>
-      <MatchModal artwork={artworks[0]} artist={artworks[0].artist} visible={modalVisible} />
+      { artworks.length > 0 && <MatchModal artwork={artworks[0]} artist={artworks[0].artist} visible={modalVisible} /> }
     </section>
     <BottomPane />
   </>;

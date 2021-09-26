@@ -7,8 +7,8 @@ function SwipeArea({ artworks }) {
   const back = artworks[1];
   return (
     <div className="col flex-grow-1 d-flex p-4">
-      {artworks.length >= 1 && <DraggableArtworkCard artwork={artworks[0]} />}
-      {artworks.length >= 2 && <ArtworkCard artwork={artworks[1]} />}
+      {artworks.length >= 1 && <DraggableArtworkCard artwork={front} />}
+      {artworks.length >= 2 && <ArtworkCard artwork={back} />}
     </div>
   );
 }
