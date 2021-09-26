@@ -10,19 +10,22 @@ function SwipePage() {
     { id: 1, name: 'Stuart Davis', bio: 'Bio preview', imageUrl: '/artists/stuart-davis.png' },
     { id: 2, name: 'Raphael Hefti', bio: 'Bio preview', imageUrl: '/artists/raphael-hefti.jpg' },
     { id: 3, name: 'Christo and Jean-Claude', bio: 'Bio preview', imageUrl: '/artists/christo-jean-claude.jpg' },
-    { id: 4, name: 'Pieter de Hoock', bio: 'Bio preview', imageUrl: '/artists/pieter-de-hoock.jpg' }
+    { id: 4, name: 'Pieter de Hoock', bio: 'Bio preview', imageUrl: '/artists/pieter-de-hoock.jpg' },
+    { id: 5, name: 'Vincent van Gogh', bio: 'Bio preview', imageUrl: '/artists/van-gogh.jpg' }
   ];
 
   const MediumStillLife = 'With its abstract arrangement of colorful forms, "Medium Still Life" demonstrates Davis\'s use of what he called "color-space." The artist had developed the idea that the juxtaposition of strong colors could create spatial relationships within a painting, without the use of traditional perspective. He articulated his theories on the use of color in the 1940s, saying, "I think of it as another element like line and space… as an interval of space.… People use to think of color and form as two things. I think of them as the same thing."';
   const LArcDeTriompheWrapped = 'In 1961, three years after they met in Paris, Christo and Jeanne-Claude began creating works of art in public spaces. One of their projects was to wrap a public building. When he arrived in Paris, Christo rented a small room near the Arc de Triomphe and had been attracted by the monument ever since. In 1962, he made a photomontage of the Arc de Triomphe wrapped, seen from the Avenue Foch and, in 1988, a collage. 60 years later, the project will finally be concretized. Exhibition from September 18 to Sunday, October 3, 2021.';
   const RaphaelHefti = '> This will be the description of the Raphael Hefti\'s work';
   const TheBedroom = 'Pieter de Hooch excelled in the sensitive depiction of people going about their daily lives, be it inside their houses or in the sheltered environment of an urban courtyard. Through his careful arrangement of the interior space in The Bedroom and his treatment of light, De Hooch infused this everyday scene with an extraordinary intimacy and warmth. ';
+  const StarryNight = '“This morning I saw the countryside from my window a long time before sunrise, with nothing but the morning star, which looked very big,” wrote van Gogh to his brother Theo, describing his inspiration for one of his best-known paintings, The Starry night. The window to which he refers was in the Saint-Paul asylum in Saint-Rémy, in southern France, where he sought respite from his emotional suffering while continuing to make art.';
 
   const sampleArtworks = [
     { id: 1, title: 'Medium Still Life', year: '1953', desc: MediumStillLife, artist: sampleArtists[0], imageUrl: '/artworks/medium-still-life.jpg', dims: '114.3 x 91.44 cm', price: 550, medium: 'Painting - Oil on canvas' },
     { id: 2, title: 'Salutary Failures, Message Not Sent', year: '2020', desc: RaphaelHefti, artist: sampleArtists[1], imageUrl: '/artworks/raphael-hefti-artwork.jpeg', dims: '114.3 x 91.44 cm', price: 18, medium: 'Painting - Oil on canvas' },
     { id: 3, title: 'L\'Arc de  Triomphe, Wrapped', year: '1961-2021', desc: LArcDeTriompheWrapped, artist: sampleArtists[2], imageUrl: '/artworks/arc.webp',  dims: '', price: 0, medium: 'Exhibition in Paris' },
-    { id: 4, title: 'The Bedroom', year: '1658', desc: TheBedroom, artist: sampleArtists[3], imageUrl: '/artworks/the-bedroom.jpg',  dims: '51 x 60 cm', price: 1200, medium: 'Painting - Oil on canvas'}
+    { id: 4, title: 'Starry Night', year: '1889', desc: StarryNight, artist: sampleArtists[4], imageUrl: '/artworks/starry-night.jpg', dims: '73.7 x 92.1 cm', price: 2300, medium: 'Painting - Oil on canvas'},
+    { id: 5, title: 'The Bedroom', year: '1658', desc: TheBedroom, artist: sampleArtists[3], imageUrl: '/artworks/the-bedroom.jpg',  dims: '51 x 60 cm', price: 1200, medium: 'Painting - Oil on canvas'}
   ];
 
   const [artworks, setArtworks] = useState(sampleArtworks);
