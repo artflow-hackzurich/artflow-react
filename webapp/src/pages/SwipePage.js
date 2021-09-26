@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
 import FancyButton from '../components/FancyButton';
 import SwipeArea from '../components/SwipeArea';
 import BottomPane from '../components/BottomPane';
@@ -28,6 +29,8 @@ function SwipePage() {
   const [currentArtwork, setCurrentArtwork] = useState(sampleArtworks[0]);
   const [modalVisible, setModalVisible] = useState(false);
 
+  const history = useHistory();
+
   const onSwipe = (e) => {
     if (e.detail.dir === 'right') {
       setCurrentArtwork(artworks[0]);
@@ -35,12 +38,18 @@ function SwipePage() {
 
     // Update artworks
     var newArtworks = [...artworks];
-    newArtworks.shift();
+    const currentArtwork = newArtworks.shift();
     setArtworks(newArtworks);
 
     // Show modal
     if (e.detail.dir === 'right') {
-      setModalVisible(true);
+      //setModalVisible(true);
+      const detailsLinkTo = {
+        pathname: '/artwork/' + currentArtwork.id,
+        artwork: currentArtwork,
+        artist: currentArtwork.artist
+      }
+      history.push(detailsLinkTo);
     }
   };
 
