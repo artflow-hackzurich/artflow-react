@@ -18,16 +18,21 @@ function SwipePage() {
   const TheBedroom = 'Pieter de Hooch excelled in the sensitive depiction of people going about their daily lives, be it inside their houses or in the sheltered environment of an urban courtyard. Through his careful arrangement of the interior space in The Bedroom and his treatment of light, De Hooch infused this everyday scene with an extraordinary intimacy and warmth. ';
 
   const sampleArtworks = [
-    { id: 1, title: 'Medium Still Life', year: 1953, desc: MediumStillLife, artist: sampleArtists[0], imageUrl: '/artworks/medium-still-life.jpg', dims: '114.3 x 91.44 cm', price: '$550', medium: 'Painting - Oil on canvas' },
-    { id: 2, title: 'Salutary Failures, Message Not Sent', year: 2020, desc: RaphaelHefti, artist: sampleArtists[1], imageUrl: '/artworks/raphael-hefti-artwork.jpeg', dims: '114.3 x 91.44 cm', price: 'Not for sale', medium: 'Painting - Oil on canvas' },
-    { id: 3, title: 'L\'Arc de  Triomphe, Wrapped', year: 1961-2021, desc: LArcDeTriompheWrapped, artist: sampleArtists[2], imageUrl: '/artworks/arc.webp',  dims: '', price: 'Free entrance', medium: 'Exhibition in Paris' },
-    { id: 4, title: 'The Bedroom', year: 1658, desc: TheBedroom, artist: sampleArtists[3], imageUrl: '/artworks/the-bedroom.jpg',  dims: '51 x 60 cm', price: '$1200', medium: 'Painting - Oil on canvas'}
+    { id: 1, title: 'Medium Still Life', year: '1953', desc: MediumStillLife, artist: sampleArtists[0], imageUrl: '/artworks/medium-still-life.jpg', dims: '114.3 x 91.44 cm', price: 550, medium: 'Painting - Oil on canvas' },
+    { id: 2, title: 'Salutary Failures, Message Not Sent', year: '2020', desc: RaphaelHefti, artist: sampleArtists[1], imageUrl: '/artworks/raphael-hefti-artwork.jpeg', dims: '114.3 x 91.44 cm', price: 18, medium: 'Painting - Oil on canvas' },
+    { id: 3, title: 'L\'Arc de  Triomphe, Wrapped', year: '1961-2021', desc: LArcDeTriompheWrapped, artist: sampleArtists[2], imageUrl: '/artworks/arc.webp',  dims: '', price: 0, medium: 'Exhibition in Paris' },
+    { id: 4, title: 'The Bedroom', year: '1658', desc: TheBedroom, artist: sampleArtists[3], imageUrl: '/artworks/the-bedroom.jpg',  dims: '51 x 60 cm', price: 1200, medium: 'Painting - Oil on canvas'}
   ];
 
   const [artworks, setArtworks] = useState(sampleArtworks);
+  const [currentArtwork, setCurrentArtwork] = useState(sampleArtworks[0]);
   const [modalVisible, setModalVisible] = useState(false);
 
   const onSwipe = (e) => {
+    if (e.detail.dir === 'right') {
+      setCurrentArtwork(artworks[0]);
+    }
+
     // Update artworks
     var newArtworks = [...artworks];
     newArtworks.shift();
@@ -53,7 +58,7 @@ function SwipePage() {
         <FancyButton customClass="btn-dont-like" icon="dont-like" />
         <FancyButton customClass="btn-like" icon="like" />
       </div>
-      { artworks.length > 0 && <MatchModal artwork={artworks[0]} artist={artworks[0].artist} visible={modalVisible} /> }
+      { artworks.length > 0 && <MatchModal artwork={currentArtwork} artist={currentArtwork.artist} visible={modalVisible} /> }
     </section>
     <BottomPane />
   </>;

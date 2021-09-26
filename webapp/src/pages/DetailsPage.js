@@ -49,10 +49,16 @@ function DetailsPage() {
             </svg>
           </button>
         </div>
-        <div className="d-flex gap-3 px-4 py-3 align-items-center justify-content-between">
-          <p className="mb-0 fs-2 fw-bold">{ artwork.price }</p>
-          <button className="buy-btn bg-dark rounded-pill text-light">Buy now</button>
-        </div>
+        { artwork.price !== null && artwork.price > 0 &&
+          <div className="d-flex gap-3 px-4 py-3 align-items-center justify-content-between">
+            <p className="mb-0 fs-2 fw-bold">$ { artwork.price }</p>
+            <button className="buy-btn bg-dark rounded-pill text-light">Buy now</button>
+          </div> }
+        { artwork.price !== null && artwork.price === 0 &&
+          <div className="d-flex gap-3 px-4 py-3 align-items-center justify-content-between">
+            <p className="mb-0 fs-2 fw-bold">Free</p>
+            <button className="buy-btn bg-dark rounded-pill text-light">Learn more</button>
+          </div> }
       </section>
       <BottomPane />
     </>;

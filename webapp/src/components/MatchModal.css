@@ -1,2 +1,8 @@
-.modal-content { width: 100%; max-width: 75vw; border-radius: 0.5rem; }
+.modal-content { width: 100%; max-width: 75vw; border-radius: 0; border: 0.375rem solid #212529; }
 .modal-content .preview { max-height: 40vw; }
+
+.modal-content .buy-btn {
+  text-transform: uppercase;
+  border: 0;
+  padding: 0.5rem 2rem;
+}
