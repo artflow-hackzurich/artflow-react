@@ -1,6 +1,22 @@
 .fancy-btn {
-  width: 4.5rem;
-  height: 4.5rem;
-  background: black;
+  width: 4rem;
+  height: 4rem;
   border: 0;
+}
+
+.fancy-btn:focus {
+  color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(0,0,0,.1);
+}
+
+.fancy-btn > img {
+  width: 1.5rem;
+}
+
+.btn-dont-like {
+  padding-top: 0.45em;
+}
+
+.btn-like {
+  padding-bottom: 0.6em;
 }

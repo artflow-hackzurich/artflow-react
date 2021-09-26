@@ -1,14 +1,13 @@
 import React from 'react';
 import './FancyButton.css';
 
-class FancyButton extends React.Component {
+function FancyButton({ customClass, icon }) {
 
-  render() {
-    return (
-      <button type="button" className="fancy-btn btn btn-primary rounded-circle mx-3">{this.props.message}</button>
-    );
-  }
-
+  return (
+    <button type="button" className={"fancy-btn btn btn-primary rounded-circle mx-3 bg-dark " + customClass }>
+      <img src={'/icons/' + icon + '.svg'} />
+    </button>
+  );
 }
 
 export default FancyButton;

@@ -50,8 +50,8 @@ function SwipePage() {
     <section className="row flex-grow-1 d-flex flex-column overflow-hidden">
       <SwipeArea artworks={artworks} />
       <div className="text-center d-flex align-items-center justify-content-center pb-4">
-        <FancyButton message="No" />
-        <FancyButton message="Yes" />
+        <FancyButton customClass="btn-dont-like" icon="dont-like" />
+        <FancyButton customClass="btn-like" icon="like" />
       </div>
       <MatchModal artwork={artworks[0]} artist={artworks[0].artist} visible={modalVisible} />
     </section>

@@ -72,7 +72,7 @@ function DraggableArtworkCard({ artwork }) {
         style={{ x, rotate, opacity, backgroundImage: 'url(' + artwork.imageUrl + ')' }}
         onDragEnd={onDragEndHandler}>
       <div className="card-body flex-grow-0 p-4 pt-5">
-        <h5 className="card-title d-flex gap-2">
+        <h5 className="card-title d-flex gap-2 justify-content-between">
           <Link to={detailsLinkTo} className="artwork-title text-reset text-decoration-none">{artwork.title}</Link>
           <Link to={detailsLinkTo} className="artwork-card-info-button badge rounded-pill text-dark text-decoration-none">i</Link>
         </h5>
