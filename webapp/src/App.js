@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import DetailsPage from './pages/DetailsPage';
 import SwipePage from './pages/SwipePage';
+import ArPage from './pages/ArPage';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           <img src={logo} style={{ height: '1.2rem' }} className="my-0" />
         </section>
         <Switch>
+          <Route path='/artwork/:id/ar' component={ArPage} />
           <Route path='/artwork/:id' component={DetailsPage} />
           <Route component={SwipePage} />
         </Switch>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import BottomPane from '../components/BottomPane';
 import { motion, useAnimation, useMotionValue, useTransform } from 'framer-motion';
 import './DetailsPage.css';
@@ -37,7 +37,7 @@ function DetailsPage() {
                 className="for-sale-toast text-white rounded-3">
               This item is for sale!
             </motion.p> }
-          <button type="button" className="ar-btn d-flex flex-column justify-content-center badge fs-6 p-0 pb-1 border-0 rounded-pill text-decoration-none text-center">AR</button>
+          <Link to="/artwork/1/ar" type="button" className="ar-btn d-flex flex-column justify-content-center badge fs-6 p-0 pb-1 border-0 rounded-pill text-decoration-none text-center">AR</Link>
         </div>
         <div className="artwork-details px-4 pt-3 flex-grow-0">
           <h2>

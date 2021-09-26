@@ -1,0 +1,61 @@
+.artwork-preview {
+  height: 140vw;
+  max-height: 45vh;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.ar-preview {
+  max-height: 80vh;
+}
+
+.artwork-preview .ar-btn {
+  background: black;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding-top: 0.35rem;
+}
+
+.back-btn {
+  background: black;
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: 2rem;
+  padding-top: 0;
+}
+
+.artist-block > img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.artist-block .artist-details-btn {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: #FFF;
+}
+
+.buy-btn {
+  text-transform: uppercase;
+  border: 0;
+  padding: 0.3rem 2rem;
+}
+
+.for-sale-toast {
+  height: 2.75rem;
+  line-height: 2.75rem;
+  padding: 0 1.5rem;
+  background: black;
+  transform: translateY(-64px);
+}
+
+.ar-preview-video {
+  transform: translateY(-12.5rem);
+}
+
+.ar-preview-container .back-btn {
+  position: relative;
+  z-index: 1500;
+  margin: 1rem;
+}
